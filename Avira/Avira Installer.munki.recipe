@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Avira Installer and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.bfreezy.autopkg.munki.AviraInstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>APP_FILENAME</key>
+		<string>Install Avira</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Avira</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>blocking_applications</key>
+			<array>
+				<string>Avira.app</string>
+				<string>Avira-Supportcollector.app</string>
+				<string>Avira-Uninstall.app</string>
+			</array>
+			<key>description</key>
+			<string>Avira is a reliable and powerful Mac OS X application specially designed to protect your system against a wide variety of threats, viruses and malware.</string>
+			<key>developer</key>
+			<string>Avira Operations GmbH &amp; Co. KG</string>
+			<key>display_name</key>
+			<string>Avira</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.bfreezy.autopkg.pkg.AviraInstaller</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
