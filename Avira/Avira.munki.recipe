@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Avira and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.bfreezy.autopkg.munki.Avira</string>
+	<string>com.github.bfreezy.munki.Avira</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
@@ -41,7 +41,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.bfreezy.autopkg.pkg.Avira</string>
+	<string>com.github.bfreezy.pkg.Avira</string>
 	<key>Process</key>
 	<array>
 		<dict>
