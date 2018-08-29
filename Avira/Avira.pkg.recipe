@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Avira Installer and creates a package.</string>
+	<string>Downloads the latest version of Avira and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.bfreezy.autopkg.pkg.AviraInstaller</string>
+	<string>com.bfreezy.autopkg.pkg.Avira</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.bfreezy.autopkg.download.AviraInstaller</string>
+	<string>com.bfreezy.autopkg.download.Avira</string>
 	<key>Process</key>
 	<array>
 		<dict>
